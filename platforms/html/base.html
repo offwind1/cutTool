@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1px" cellspacing="0" align="center">
+    <thead>
+        <th>文件夹</th>
+        <th>标记框数量</th>
+        {% for key in list[0][2] %}
+            <th>{{key}}</th>
+        {% endfor %}
+    </thead>
+
+
+    <tbody>
+    {% for line in list %}
+        <tr>
+            <td>{{line[0]}}</td>
+            <td>{{line[1]}}</td>
+            {% for key in line[2] %}
+                <td>{{line[2][key]["count"]}}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+
+    <tr>
+        <td>综合</td>
+        <td>{{all}}</td>
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+/* 主体 */
+body { min-width:200px; padding:0; margin:0; font-family:sans-serif;}
+* { box-sizing: border-box; }
+input[type=text] { border:1px solid #cccccc; margin:0.6rem 0; padding:0.2rem 0.4rem; }
+a { text-decoration:none; }
+textarea { border:1px solid #cccccc; margin:0.6rem 0; padding:0.2rem 0.4rem; }
+/* 属性编辑 */
+#annotation_editor_panel { position:fixed; display:none; width:100%; left:0; bottom:0; background-color:white; border-top:2px solid #cccccc; padding:0.2em 1em; overflow:auto; z-index:1001; box-shadow: 0 0 1em #cccccc;}
+#annotation_editor { display:table; margin-bottom:3em; border-collapse:collapse; font-size:inherit; position: absolute; background-color:white; }
+#annotation_editor .row { display:table-row; }
+#annotation_editor .highlight .col { background-color:#e6e6e6;}
+
+#annotation_editor .col { display:table-cell; padding:0.4em 0.6em; border:1px solid #000000; vertical-align:middle; font-size:inherit; }
+#annotation_editor .header { font-weight:bold; }
+#annotation_editor .id { font-weight:bold; }
+#annotation_editor .col input[type=checkbox] { vertical-align:middle; }
+#annotation_editor .col input[type=radio] { vertical-align:middle; font-size:inherit; }
+#annotation_editor .col label { vertical-align:middle; font-size:inherit; }
+#annotation_editor .col textarea { border:0.1em solid #cccccc; padding:0; margin:0; font-size:inherit; background-color:#ffffff; }
+#annotation_editor .col textarea:focus { border:0.1em dashed #cccccc; }
+#annotation_editor .col span { display:block; }
+#annotation_editor .col horizontal_container { display:inline-block; }
+
+#annotation_editor .col .img_options { display:inline; }
+#annotation_editor .col .img_options .imrow { display:block; }
+#annotation_editor .col .img_options span { display:inline-block; margin: 0.2rem 0.4rem;}
+#annotation_editor .col .img_options span img { height:4em; }
+#annotation_editor .col .img_options p { margin:0; padding:0; font-size:inherit; }
+#annotation_editor .col .img_options input[type=radio] { display:none; }
+#annotation_editor .col .img_options input[type=radio] + label { display:block; cursor:pointer; text-align:center;}
+#annotation_editor .col .img_options input[type=radio]:checked + label { border: 0.1em solid black; background-color:#cccccc; cursor:default; font-size:inherit; }
+
+/* page {about, help, file not found, etc.} */
+.display_area_content { } /* this class is used to clear the display area content */
+.narrow_page_content li { font-size:0.9rem; margin: 0.4rem 0; }
+.narrow_page_content { width:60%; }
+
+.force_small_font { font-size:small !important; }
+
+/* 项目设置页面-顶部图标进入 */
+#settings_panel { font-size:1rem; border-collapse:collapse; width:95%; }
+#settings_panel a { border: 1px solid #f2f2f2; }
+#settings_panel .row { display:table-row; border-bottom:1px solid #f2f2f2; }
+#settings_panel .variable { display:table-cell; width:60%; padding:0.5rem 0.5rem; }
+#settings_panel .variable div { display:block; }
+#settings_panel .variable .name { }
+#settings_panel .variable .desc { font-size:0.7em; color:#808080; padding:0.2rem 0rem; }
+#settings_panel .value { display:table-cell; vertical-align:middle; padding-left:1rem; }
+
+/* Loading spinbar */
+.loading_spinbox        { display:inline-block; border:0.4em solid #cccccc; border-radius:50%; border-top:0.4em solid black; border-bottom:0.4em solid black;-webkit-animation:spin 2s linear infinite; animation:spin 2s linear infinite; }
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); } 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin         { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+#invisible_file_input { width:0.1px; height:0.1px; opacity:0; overflow:hidden; position:absolute; z-index:-1; }
+
+.display_none  { display:none !important; }
+.display_block { display:block !important; }
